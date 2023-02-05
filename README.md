@@ -43,7 +43,12 @@ max-line-length = 99
 ```yaml
 name: CI wowkflow
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    # Monthly execution schedule for UTC.
+    - cron: "3 3 5 * * "
 
 jobs:
   CI:
@@ -65,7 +70,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry config virtualenvs.create false
-          poetry install --with dev
+          poetry install --with dev --no-root # If your project is about python package, you need not `--no-root` option.
       - name: Lint and format check
         run: |
           black --check --diff .
