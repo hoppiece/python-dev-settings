@@ -1,6 +1,11 @@
 name: CI wowkflow
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    # Schedule for UTC
+    - cron: "42 4 1 * * "
 
 jobs:
   CI:
@@ -22,7 +27,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry config virtualenvs.create false
-          poetry install --with dev
+          poetry install --with dev --no-root
       - name: Lint and format check
         run: |
           black --check --diff .
