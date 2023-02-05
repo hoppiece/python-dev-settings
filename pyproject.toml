@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "python-dev-settings"
+version = "0.1.0"
+description = "Apache-2.0"
+authors = ["hoppiece <hoppiece@gmail.com>"]
+readme = "README.md"
+packages = [{include = "python_dev_settings"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+mypy = "^0.991"
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Copy below for new python development
+[tool.mypy]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+[tool.black]
+line-length = 99
+[tool.isort]
+profile = "black"
+line_length = 99
