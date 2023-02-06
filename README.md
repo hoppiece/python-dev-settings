@@ -16,7 +16,7 @@ poetry env use python
 poetry install --no-root
 ```
 Brief explanation.
-- `pyenv install 3.x.x` -- Installing python to local. Search installable version by pyenv install --list. Your available version on the local can show by `pyenv versions`.
+- `pyenv install 3.x.x` -- Installing python to local. Search installable version by `pyenv install --list`. Your available version on the local can show by `pyenv versions`.
 - `pyenv shell 3.x.x` --  Added the path to pyenv's 3.x.x on your current shell.
 - `poetry config --local virtualenvs.in-project true` --  Poetry makes `.venv/` for virtual environment. If you want to set this as a global, need not. `--local` option (Setting as global is recommended if you use VSCode.)
 - `poetry env use python` -- Poetry creates the vertualenv specified the python path. In this case, Poetry uses the pyenv's Python 3.x.x path, and creates the `.venv` directory.
