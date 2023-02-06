@@ -32,8 +32,8 @@ Install development support tools such as Linter.
 poetry add black isort flake8 mypy pytest pytest-cov --group dev
 ```
 Comment.
-- The line length restriction is relaxed from pep8 to allow up to 99 characters.
-- The `mypy` setup is based on this site: [Professional-grade mypy configuration](https://careers.wolt.com/en/blog/tech/professional-grade-mypy-configuration)
+- The line length restriction is relaxed from [pep8](https://peps.python.org/pep-0008/) to allow up to 99 characters.
+- The `mypy` setup is based on this page: [Professional-grade mypy configuration](https://careers.wolt.com/en/blog/tech/professional-grade-mypy-configuration)
 
 
 You can lighten the built package by seting dev-dependencies as optional.
