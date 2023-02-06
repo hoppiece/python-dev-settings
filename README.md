@@ -5,7 +5,7 @@ My settings when start a new Python project.
 
 ### 1. Tools setup
 1. Set up python via pyenv
-2. Setup poetry
+2. Setup Poetry (`>=1.2`)
 
 Recomend set as 
 ```bash
