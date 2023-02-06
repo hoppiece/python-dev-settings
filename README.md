@@ -3,9 +3,32 @@
 My settings when start a new Python project.
 
 
+### 1. Tools setup
+1. Set up python via pyenv
+2. Setup poetry
 
-### 1. Install tools via Poetry
+Recomend set as 
+```bash
+pyenv install 3.x.x
+pyenv shell 3.x.x 
+poetry config --local virtualenvs.in-project true
+poetry env use python
+poetry install --no-root
 ```
+Brief explanation.
+- `pyenv install 3.x.x` -- Installing python to local. Search installable version by pyenv install --list. Your available version on the local can show by `pyenv versions`.
+- `pyenv shell 3.x.x` --  Added the path to pyenv's 3.x.x on your current shell.
+- `poetry config --local virtualenvs.in-project true` --  Poetry makes `.venv/` for virtual environment. If you want to set this as a global, need not. `--local` option (Setting as global is recommended if you use VSCode.)
+- `poetry env use python` -- Poetry creates the vertualenv specified the python path. In this case, Poetry uses the pyenv's Python 3.x.x path, and creates the `.venv` directory.
+- `poetry install --no-root` -- Poetry installs dependencies.
+    - If you develop a python package (i.e., your project has a directory the same as a package name and the directory contains your package source code), need not `--no-root` option.
+
+IDEs detect `.venv` directory and activate the virtualenv automatically on it's terminal. If you run in a primitive shell, activate the virtualenv by `source .venv/bin/activate`, or tell virtualenv to Poetry by `poetry run python <your script>`.
+
+
+### 2. Install tools via Poetry
+Install development support tools such as Linter.
+```bash
 poetry add black isort flake8 mypy pytest pytest-cov --group dev
 ```
 Comment.
@@ -13,7 +36,7 @@ Comment.
 - The `mypy` setup is based on this site: [Professional-grade mypy configuration](https://careers.wolt.com/en/blog/tech/professional-grade-mypy-configuration)
 
 
-### 2. Configuate the tools
+### 3. Configuate the tools
 
 `pyproject.toml`
 ```toml
