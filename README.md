@@ -4,8 +4,8 @@ My settings when start a new Python project.
 
 
 ### 1. Tools setup
-1. Set up python via pyenv
-2. Setup Poetry (`>=1.2`)
+1. Set up python via [`pyenv`](https://github.com/pyenv/pyenv)
+2. Setup [`Poetry`](https://python-poetry.org/) (`>=1.2`)
 
 Recommend settings:
 ```bash
@@ -35,6 +35,12 @@ Comment.
 - The line length restriction is relaxed from pep8 to allow up to 99 characters.
 - The `mypy` setup is based on this site: [Professional-grade mypy configuration](https://careers.wolt.com/en/blog/tech/professional-grade-mypy-configuration)
 
+
+You can lighten the built package by seting dev-dependencies as optional.
+```toml
+[tool.poetry.group.dev]
+optional = true
+```
 
 #### Isolated installation of dev tools
 
