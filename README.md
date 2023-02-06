@@ -36,7 +36,8 @@ Comment.
 - The `mypy` setup is based on this site: [Professional-grade mypy configuration](https://careers.wolt.com/en/blog/tech/professional-grade-mypy-configuration)
 
 
-#### Isolated install of dev tools
+#### Isolated installation of dev tools
+
 In some cases, dependencies of the dev tools conflict with other dependencies on your project, for example:
 ```
 Because no versions of black match >23.1.0,<24.0.0
