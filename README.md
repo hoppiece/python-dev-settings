@@ -1,3 +1,4 @@
+[![CI wowkflow](https://github.com/hoppiece/python-dev-settings/actions/workflows/ci.yaml/badge.svg)](https://github.com/hoppiece/python-dev-settings/actions/workflows/ci.yaml)
 ## What's this
 My settings when start a new Python project.
 
