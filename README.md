@@ -21,7 +21,7 @@ Brief explanation.
 - `poetry config --local virtualenvs.in-project true` --  Poetry makes `.venv/` for virtual environment. If you want to set this as a global, need not `--local` option (Setting as global is recommended if you use VSCode.)
 - `poetry env use python` -- Poetry creates the vertualenv specified the python path. In this case, Poetry uses the pyenv's Python 3.x.x path, and creates the `.venv` directory.
 - `poetry install --no-root` -- Poetry installs dependencies.
-    - If you develop a python package (i.e., your project has a directory the same as a package name and the directory contains your package source code), need not `--no-root` option.
+    - If you develop a python package (i.e., your project has a directory that is the same name as the package), need not `--no-root` option.
 
 IDEs detect `.venv` directory and activate the virtualenv automatically on it's terminal. If you run in a primitive shell, activate the virtualenv by `source .venv/bin/activate` (or `poetry shell`), or tell virtualenv to Poetry by `poetry run python <your script>`.
 
