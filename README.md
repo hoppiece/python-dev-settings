@@ -131,7 +131,12 @@ jobs:
       - name: Test with pytest and doctest
         run: |
           pytest --cov --doctest-modules .
-      - name: Upload coverge reports to Codecov via GitHub Actions
+      - name: Upload coverge reports to Codecov via GitHub Actions # Optional
         uses: codecov/codecov-action@v3
 
 ```
+
+
+## Reference
+- https://careers.wolt.com/en/blog/tech/professional-grade-mypy-configuration
+- https://packaging.python.org/en/latest/guides/installing-stand-alone-command-line-tools/
